@@ -193,7 +193,7 @@ body {
   
   background:
     linear-gradient(rgba(5, 11, 42, 0.7), rgba(5, 11, 42, 0.7)),
-    url("images/Ferrari\ 296\ gts.webp") center/cover no-repeat;
+    url("assets/Ferrari\ 296\ gts.webp") center/cover no-repeat;
 }
 
 .hero-inner {

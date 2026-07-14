@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CarsArena.com – FAQs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="faqs.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="nav-left">
+      <a href="home.html">
+        <img src="images/logo.png" alt="CarsArena.com" class="brand-logo" />
+      </a>
+    </div>
+
+    <!-- Main nav -->
+    <nav class="nav-main">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <!-- FAQ DROPDOWN -->
+        <li class="has-dropdown">
+         
+          <a href="faqs.html">FAQ</a>
+          <ul class="dropdown">
+            <li><a href="faqs.html#faq-list">Frequently Asked Questions</a></li>
+            <li><a href="faqs.html#ask-question">Ask a Question</a></li>
+            <li><a href="troubleshooting.html#troubleshooting">Troubleshooting</a></li>
+            <li><a href="troubleshooting.html#help-support">Support / Help</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Login -->
+    <div class="nav-right">
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </div>
+</header>
+
+
+
+
+  <!-- ========== FAQ WRAPPER ========== -->
+  <main class="faq-wrapper">
+
+    <h1 class="page-title">Frequently Asked Questions</h1>
+    <p class="page-subtitle">
+      Find quick answers to common questions, or send us your own query.
+    </p>
+
+    <section class="faq-layout">
+
+      <!-- LEFT: FAQ LIST -->
+      <div class="faq-list" id="faq-list">
+        <!-- FAQ 1 -->
+        <details open class="faq-item">
+          <summary>
+            <span>What documents are required to purchase a car?</span>
+            <span class="symbol">−</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              You generally need CNIC, proof of income, bank statement, and a recent utility bill.
+              Requirements may vary depending on payment method and dealer policy.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="faq-item">
+          <summary>
+            <span>Can I book a test drive before purchasing a car?</span>
+            <span class="symbol">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes, many dealerships allow you to schedule a test drive. Use the contact or inquiry form
+              on our platform, and we’ll help connect you to the relevant dealer.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="faq-item">
+          <summary>
+            <span>Are the cars brand-new or used?</span>
+            <span class="symbol">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Our listings may include both brand-new and used vehicles. Each car card clearly mentions
+              model year, mileage (for used cars), and condition.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="faq-item">
+          <summary>
+            <span>Do you provide after-sales services or warranty?</span>
+            <span class="symbol">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              CarsArena itself is a platform. Warranty and after-sales services are provided by
+              authorized dealers or manufacturers, and details are mentioned with the respective car.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="faq-item">
+          <summary>
+            <span>Can I compare multiple cars side by side?</span>
+            <span class="symbol">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes. Our comparison option lets you select multiple cars and view their specifications,
+              prices, and key features in one place.
+            </p>
+          </div>
+        </details>
+      </div>
+
+
+
+      <!-- RIGHT: ASK A QUESTION FORM -->
+      <aside class="ask-card" id="ask-question">
+        <h2>Ask a Question</h2>
+        <p>If you don’t find your answer above, send us your query.</p>
+
+        <form class="ask-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@gmail.com" />
+
+          <label for="topic">Subject</label>
+          <input type="text" id="topic" placeholder="Question topic" />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Type your question"></textarea>
+
+          <button type="submit" class="submit-btn">Submit Question</button>
+        </form>
+      </aside>
+
+    </section>
+
+  </main>
+   <script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const symbol = item.querySelector('.symbol');
+    item.addEventListener('toggle', () => {
+      if(item.open) {
+        symbol.textContent = '−';
+      } else {
+        symbol.textContent = '＋';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

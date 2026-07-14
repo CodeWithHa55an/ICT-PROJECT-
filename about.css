@@ -1,0 +1,380 @@
+/* ========= RESET ========= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #f9fafb;
+  background-color: #050b2a;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========= STICKY NAVBAR ========= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(4, 10, 40, 0.97);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+}
+
+/* animated neon line under navbar */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  width: 60%;
+  height: 3px;
+  background: radial-gradient(circle, #00eaff, transparent 60%);
+  opacity: 0.6;
+  filter: blur(2px);
+  animation: navGlow 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes navGlow {
+  0%, 100% { opacity: 0.3; filter: blur(3px); }
+  50%      { opacity: 1;   filter: blur(1px); }
+}
+
+.nav-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+
+.nav-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+}
+
+.nav-links a {
+  position: relative;
+  color: #e5e7eb;
+  font-weight: 500;
+  font-size: 0.98rem;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  transition: color 0.2s ease;
+}
+
+/* neon underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00eaff, #2563eb);
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* DROPDOWNS */
+
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  min-width: 190px;
+  background: rgba(4, 10, 40, 0.98);
+  border-radius: 12px;
+  border: 1px solid #00eaff;
+  box-shadow:
+    0 0 14px rgba(0, 234, 255, 0.75),
+    0 0 26px rgba(15, 23, 42, 0.95);
+  padding: 0.5rem 0;
+  display: none;
+  z-index: 120;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.dropdown li a:hover {
+  background: rgba(0, 234, 255, 0.08);
+  color: #ffffff;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn {
+  padding: 0.4rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid #e5e5e5;
+  background: #d4d4d4;
+  color: #111827;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.login-btn:hover {
+  background: #00eaff;
+  color: #020617;
+  border-color: #00eaff;
+  box-shadow:
+    0 0 12px #00eaff,
+    0 0 24px rgba(0, 234, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+/* ========= ABOUT SECTION ========= */
+
+.about-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.8rem 1.5rem 3.5rem;
+}
+
+.about-heading {
+  text-align: left;
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+.about-heading h1 {
+  font-size: 1.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f9fafb;
+  text-shadow: 0 0 8px rgba(0, 234, 255, 0.8);
+}
+
+/* neon divider under ABOUT US */
+.about-heading::after {
+  content: "";
+  display: block;
+  margin-top: 0.6rem;
+  width: 130px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00eaff, #2563eb);
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.9);
+}
+
+/* Top info cards */
+
+.about-top-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+  margin-bottom: 2.4rem;
+}
+
+.info-card {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), #050b2a);
+  border-radius: 16px;
+  padding: 1.4rem 1.3rem 1.3rem;
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  box-shadow:
+    0 0 12px rgba(0, 234, 255, 0.35),
+    0 0 26px rgba(15, 23, 42, 0.9);
+  transition: 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 16px rgba(0, 234, 255, 0.8),
+    0 0 34px rgba(15, 23, 42, 0.9);
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.info-card p,
+.info-card li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.info-card ul {
+  list-style: none;
+  margin-top: 0.2rem;
+}
+
+.info-card ul li::before {
+  /* neon bullet */
+  content: "•";
+  color: #00eaff;
+  text-shadow: 0 0 6px #00eaff;
+  margin-right: 0.4rem;
+}
+
+/* Car image strip */
+
+.about-car-strip {
+  margin: 0 auto 2.4rem;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #00eaff;
+  box-shadow:
+    0 0 18px rgba(0, 234, 255, 0.8),
+    0 0 40px rgba(15, 23, 42, 0.9);
+  max-width: 100%;
+}
+
+.about-car-image {
+  /* BACKGROUND IMAGE SLOT FOR ABOUT CAR */
+  height: 260px;
+  background:
+    linear-gradient(to top, rgba(5, 11, 42, 0.25), rgba(5, 11, 42, 0.0)),
+    url("images/about\ image.avif") center/cover no-repeat;
+}
+
+/* Bottom row cards */
+
+.about-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+  margin-bottom: 2.4rem;
+}
+
+.bottom-card {
+  background: radial-gradient(circle at top, rgba(12, 20, 60, 0.98), #050b2a);
+  border-radius: 16px;
+  padding: 1.4rem 1.3rem 1.3rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 0 12px rgba(15, 23, 42, 0.9);
+  transition: 0.25s ease;
+}
+
+.bottom-card:hover {
+  transform: translateY(-4px);
+  border-color: #00eaff;
+  box-shadow:
+    0 0 16px rgba(0, 234, 255, 0.7),
+    0 0 32px rgba(15, 23, 42, 0.95);
+}
+
+.bottom-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.bottom-card p,
+.bottom-card li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.bottom-card ul {
+  list-style: none;
+  margin-top: 0.2rem;
+}
+
+.bottom-card ul li::before {
+  content: "•";
+  color: #00eaff;
+  text-shadow: 0 0 6px #00eaff;
+  margin-right: 0.4rem;
+}
+
+/* Bottom quote */
+
+.about-quote {
+  margin-top: 1.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #e5e7eb;
+  text-shadow: 0 0 6px rgba(0, 234, 255, 0.4);
+}
+
+/* ========= RESPONSIVE ========= */
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding-inline: 1rem;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .about-wrapper {
+    padding-inline: 1.2rem;
+  }
+
+  .about-heading h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-car-image {
+    height: 220px;
+  }
+}

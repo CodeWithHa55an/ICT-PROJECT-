@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CarsArena.com – Featured Collection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="collection.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="nav-left">
+      <a href="home.html">
+        <img src="images/logo.png" alt="CarsArena.com" class="brand-logo" />
+      </a>
+    </div>
+
+    <!-- Main nav -->
+    <nav class="nav-main">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <!-- FAQ DROPDOWN -->
+        <li class="has-dropdown">
+         
+          <a href="faqs.html">FAQ</a>
+          <ul class="dropdown">
+            <li><a href="faqs.html#faq-list">Frequently Asked Questions</a></li>
+            <li><a href="faqs.html#ask-question">Ask a Question</a></li>
+            <li><a href="troubleshooting.html#troubleshooting">Troubleshooting</a></li>
+            <li><a href="troubleshooting.html#help-support">Support / Help</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Login -->
+    <div class="nav-right">
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </div>
+</header>
+
+
+
+  <!-- ========== COLLECTION WRAPPER ========== -->
+  <main class="collection-wrapper">
+
+    <!-- FILTERS – TOP RIGHT -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label class="filter-label" for="carTypeFilter">Car Type</label>
+        <select id="carTypeFilter" class="filter-select">
+          <option value="all">All Types</option>
+          <option value="Sedan">Sedan</option>
+          <option value="SUV">SUV</option>
+          <option value="Sports">Sports</option>
+          <option value="Luxury">Luxury</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label" for="priceFilter">Pricing</label>
+        <select id="priceFilter" class="filter-select">
+          <option value="all">All Prices</option>
+          <option value="low">Up to 80,000 $</option>
+          <option value="mid1">80,000 – 200,000 $</option>
+          <option value="mid2">200,000 – 310,000 $</option>
+          <option value="high">310,000 – 420,000 $</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- HEADING -->
+    <section class="collection-heading">
+      <h1>FEATURED COLLECTION</h1>
+      <p>Handpicked premium vehicles that define automotive excellence</p>
+    </section>
+
+
+
+    <!-- CAR CARDS -->
+    <section class="cards-row">
+
+      <!-- ========= SEDANS ========= -->
+
+      <!-- BMW i7 -->
+      <article class="car-card" data-category="Sedan" data-price="106000">
+        <div class="card-img-wrap">
+          <img src="images/bmw-i7.jpg" alt="BMW i7" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sedan</span>
+          <h2 class="car-name">BMW i7</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">106,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">650 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">3.7 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-bmw-i7.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Mercedes Maybach -->
+      <article class="car-card" data-category="Sedan" data-price="240000">
+        <div class="card-img-wrap">
+          <img src="images/Mercedes-Maybach.jpg" alt="Mercedes Maybach" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sedan</span>
+          <h2 class="car-name">Mercedes Maybach</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">240,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">621 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">3.7 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-mercedes-maybach.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Audi E-tron GT -->
+      <article class="car-card" data-category="Sedan" data-price="78000">
+        <div class="card-img-wrap">
+          <img src="images/Audi-e-tron.jpg" alt="Audi E-tron GT" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sedan</span>
+          <h2 class="car-name">Audi E-Tron GT</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">78,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">402 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">5.7 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-audi-etron-gt.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Hyundai Sonata N-line -->
+      <article class="car-card" data-category="Sedan" data-price="34000">
+        <div class="card-img-wrap">
+          <img src="images/Sonata.jpg" alt="Hyundai Sonata N-Line" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sedan</span>
+          <h2 class="car-name">Hyundai Sonata N-Line</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">34,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">290 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">6.3 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-hyundai-sonata-nline.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Honda Civic -->
+      <article class="car-card" data-category="Sedan" data-price="30000">
+        <div class="card-img-wrap">
+          <img src="images/HondaCivic.png" alt="Honda Civic" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sedan</span>
+          <h2 class="car-name">Honda Civic</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">30,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">180 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">7.4 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-hyundai-sonata-nline.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+
+
+      <!-- ========= SUVs ========= -->
+
+      <!-- Range Rover Vogue -->
+      <article class="car-card" data-category="SUV" data-price="109000">
+        <div class="card-img-wrap">
+          <img src="images/Range rover Vogue.avif" alt="Range Rover Vogue" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">SUV</span>
+          <h2 class="car-name">Range Rover Vogue</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">109,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">504 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">6.3 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-range-rover-vogue.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Cadillac Escalade -->
+      <article class="car-card" data-category="SUV" data-price="90000">
+        <div class="card-img-wrap">
+          <img src="images/caddilac escalade .webp" alt="Cadillac Escalade" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">SUV</span>
+          <h2 class="car-name">Cadillac Escalade</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">90,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">420 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">6.0 sec</span>
+          </div>
+
+           <a href="cars_detail/detail-cadillac-escalade.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Lexus 570 -->
+      <article class="car-card" data-category="SUV" data-price="91000">
+        <div class="card-img-wrap">
+          <img src="images/Lexus 570.webp" alt="Lexus 570" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">SUV</span>
+          <h2 class="car-name">Lexus 570</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">91,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">383 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">7.6 sec</span>
+          </div>
+
+           <a href="cars_detail/detail-lexus-lx570.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- KIA Sportage -->
+      <article class="car-card" data-category="SUV" data-price="40000">
+        <div class="card-img-wrap">
+          <img src="images/Kia sportage .jpg" alt="KIA Sportage" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">SUV</span>
+          <h2 class="car-name">KIA Sportage</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">40,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">227 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">7.7 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-kia-sportage.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- HAVAL H6 -->
+      <article class="car-card" data-category="SUV" data-price="30000">
+        <div class="card-img-wrap">
+          <img src="images/Haval h6.jpg" alt="HAVAL H6" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">SUV</span>
+          <h2 class="car-name">HAVAL H6</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">30,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">182 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">4.8 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-haval-h6.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+
+
+      <!-- ========= SPORTS ========= -->
+
+      <!-- Lamborghini Aventador -->
+      <article class="car-card" data-category="Sports" data-price="417000">
+        <div class="card-img-wrap">
+          <img src="images/Lambourghini Aventador.jpg" alt="Lamborghini Aventador" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sports</span>
+          <h2 class="car-name">Lamborghini Aventador</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">417,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">770 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">2.8 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-lamborghini-aventador.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Ferrari 296GTS -->
+      <article class="car-card" data-category="Sports" data-price="380000">
+        <div class="card-img-wrap">
+          <img src="images/Ferrari 296 gts.webp" alt="Ferrari 296GTS" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sports</span>
+          <h2 class="car-name">Ferrari 296GTS</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">380,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">820 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">2.9 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-ferrari-296gts.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- McLaren 720S -->
+      <article class="car-card" data-category="Sports" data-price="272000">
+        <div class="card-img-wrap">
+          <img src="images/Mclaren 720S .jpg" alt="McLaren 720S" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sports</span>
+          <h2 class="car-name">McLaren 720S</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">272,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">710 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">2.9 sec</span>
+          </div>
+          <a href="cars_detail/detail-mclaren-720s.html" class="card-btn">View Details</a>
+          
+        </div>
+      </article>
+
+      <!-- KIA Stinger -->
+      <article class="car-card" data-category="Sports" data-price="50000">
+        <div class="card-img-wrap">
+          <img src="images/kia Stinger.jpg" alt="KIA Stinger" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sports</span>
+          <h2 class="car-name">KIA Stinger</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">50,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">370 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">5.0 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-kia-stinger-gt.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- MG Cyberster -->
+      <article class="car-card" data-category="Sports" data-price="170000">
+        <div class="card-img-wrap">
+          <img src="images/Mg cyberster.jpg" alt="MG Cyberster" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Sports</span>
+          <h2 class="car-name">MG Cyberster</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">170,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">340 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">3.2 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-mg-cyberster.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+
+
+      <!-- ========= LUXURY ========= -->
+
+      <!-- Rolls Royce Cullinan -->
+      <article class="car-card" data-category="Luxury" data-price="400000">
+        <div class="card-img-wrap">
+          <img src="images/Rolls Royce Cullinan.jpg" alt="Rolls Royce Cullinan" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Luxury</span>
+          <h2 class="car-name">Rolls Royce Cullinan</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">400,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">563 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">5.2 sec</span>
+          </div>
+
+           <a href="cars_detail/detail-rolls-royce-cullinan.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Bentley Flying Spur -->
+      <article class="car-card" data-category="Luxury" data-price="275000">
+        <div class="card-img-wrap">
+          <img src="images/Bently Flying Sper.jpg" alt="Bentley Flying Spur" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Luxury</span>
+          <h2 class="car-name">Bentley Flying Spur</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">275,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">771 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">3.9 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-bentley-flying-spur.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Mercedes G Wagon -->
+      <article class="car-card" data-category="Luxury" data-price="150000">
+        <div class="card-img-wrap">
+          <img src="images/Mercedes G Wagon.jpg" alt="Mercedes G Wagon" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Luxury</span>
+          <h2 class="car-name">Mercedes G Wagon</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">150,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">577 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">4.5 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-mercedes-g-wagon.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Porsche Taycan -->
+      <article class="car-card" data-category="Luxury" data-price="118000">
+        <div class="card-img-wrap">
+          <img src="images/Porshe taycan.jpeg" alt="Porsche Taycan" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Luxury</span>
+          <h2 class="car-name">Porsche Taycan</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">118,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">536 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">3.5 sec</span>
+          </div>
+
+         <a href="cars_detail/detail-porsche-taycan.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+      <!-- Lamborghini Urus -->
+      <article class="car-card" data-category="Luxury" data-price="300000">
+        <div class="card-img-wrap">
+          <img src="images/Lambourghini Urus.jpg" alt="Lamborghini Urus" />
+        </div>
+        <div class="card-body">
+          <span class="category-badge">Luxury</span>
+          <h2 class="car-name">Lamborghini Urus</h2>
+
+          <div class="card-spec">
+            <span class="label">Price:</span>
+            <span class="value highlight">300,000 $</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">HorsePower:</span>
+            <span class="value highlight">800 hp</span>
+          </div>
+          <div class="card-spec">
+            <span class="label">0–100 km/h:</span>
+            <span class="value">3.4 sec</span>
+          </div>
+
+          <a href="cars_detail/detail-lamborghini-urus.html" class="card-btn">View Details</a>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- ========== FILTER SCRIPT (CATEGORY + PRICE) ========== -->
+  <script>
+    const typeSelect = document.getElementById('carTypeFilter');
+    const priceSelect = document.getElementById('priceFilter');
+    const cards = document.querySelectorAll('.car-card');
+
+    function applyFilters() {
+      const typeValue = typeSelect.value;   // Sedan, SUV, Sports, Luxury, all
+      const priceValue = priceSelect.value; // low, mid1, mid2, high, all
+
+      cards.forEach(card => {
+        const carType = card.dataset.category;
+        const carPrice = parseInt(card.dataset.price, 10);
+
+        // ----- type filter -----
+        let typeMatch = (typeValue === 'all') || (carType === typeValue);
+
+        // ----- price filter -----
+        let priceMatch = false;
+        if (priceValue === 'all') {
+          priceMatch = true;
+        } else if (priceValue === 'low') {
+          priceMatch = carPrice <= 80000;
+        } else if (priceValue === 'mid1') {
+          priceMatch = carPrice > 80000 && carPrice <= 200000;
+        } else if (priceValue === 'mid2') {
+          priceMatch = carPrice > 200000 && carPrice <= 310000;
+        } else if (priceValue === 'high') {
+          priceMatch = carPrice > 310000 && carPrice <= 420000;
+        }
+
+        // final visibility
+        if (typeMatch && priceMatch) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    typeSelect.addEventListener('change', applyFilters);
+    priceSelect.addEventListener('change', applyFilters);
+  </script>
+
+</body>
+</html>

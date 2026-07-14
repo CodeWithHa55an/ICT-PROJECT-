@@ -1,0 +1,335 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #050b2a;
+  color: #f9fafb;
+}
+
+/* ========== NAVBAR ========== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(4, 10, 40, 0.95);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+.nav-container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  height: 40px;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.7));
+}
+
+.nav-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  font-weight: 600;
+  position: relative;
+}
+.nav-links a {
+  color: #e5e7eb;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;  
+}
+
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+.nav-right .login-btn {
+  padding: 6px 20px;
+  border-radius: 25px;
+  background: #d4d4d4;
+  color: #111;
+  border: 2px solid white;
+  font-weight: 700;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background: #00eaff;
+  color: #000;
+  box-shadow: 0 0 12px #00eaff;
+}
+
+/* DROPDOWN IN NAV */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(4,10,40,0.98);
+  border: 1px solid #00eaff;
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: 0 0 15px #00eaff;
+  display: none;
+}
+
+.dropdown li {
+  list-style: none;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 8px 20px;
+  color: #e5e7eb;
+}
+
+.dropdown li a:hover {
+  background: rgba(0, 234, 255, 0.2);
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+/* ========== COLLECTION SECTION ========== */
+
+.collection-wrapper {
+  max-width: 1120px;
+  margin: auto;
+  padding: 1.6rem 1.5rem 3rem;
+  position: relative;
+}
+
+/* FILTER BAR AT TOP RIGHT */
+.filter-bar {
+  position: absolute;
+  top: 1.4rem;     
+  right: 0;
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  z-index: 10;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+.filter-label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #e5e7eb;
+}
+
+/* Neon dropdown */
+.filter-select {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 2px solid #00eaff;
+  background-color: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 12px #00eaff;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  box-shadow: 0 0 20px #00eaff;
+}
+
+/* Neon options */
+.filter-select option {
+  background-color: #050b2a;
+  color: #e5e7eb;
+}
+
+.filter-select option:hover,
+.filter-select option:checked {
+  background-color: #111827 !important;
+  color: #00eaff !important;
+}
+
+/* HEADING */
+.collection-heading {
+  text-align: center;
+  margin-top: 4.2rem; 
+  margin-bottom: 1rem;
+}
+
+.collection-heading h1 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #ffc400;
+  text-shadow: 0 0 15px #ffc400;
+}
+
+.collection-heading p {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0;             
+  background: none;        
+  box-shadow: none;       
+  color: #e5e7eb;          
+}
+
+
+/* CAR CARDS */
+
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.6rem;
+}
+
+.car-card {
+  background: #07102d;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 20px #00eaff;
+  transition: 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px #00eaff;
+}
+
+.card-img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Category neon badge */
+.category-badge {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #00eaff;
+  background: rgba(0, 25, 60, 0.9);
+  color: #e0f2fe;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.car-name {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.card-spec {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.highlight {
+  color: #ffd54a;
+  text-shadow: 0 0 5px #ffd54a;
+}
+
+/* Neon button */
+.card-btn {
+  width: 100%;
+  margin-top: 0.6rem;
+  background: linear-gradient(90deg,#2563eb,#00a6ff);
+  padding: 12px;
+  border-radius: 30px;
+  border: 2px solid #00eaff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 18px #00a6ff;
+  /* ✅ ADD THESE */
+  text-decoration: none;     
+  text-align: center;       
+  display: block;            
+}
+.card-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #00a6ff;
+}
+
+/* RESPONSIVE: filters center on small screens */
+@media (max-width: 768px) {
+  .filter-bar {
+    position: static;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .collection-heading {
+    margin-top: 1rem;
+  }
+}
